@@ -81,10 +81,10 @@ redcarpet:
 Yayına sokma işleminin github kısmı aslında basit, projenizi github.com'a push etmekten hiç farkı yok. Aşağıdaki komutları uygulayarak bloğumuzu canlıya alalım.
 
 ```bash
-git init . # bu aşama sadece ilk commitye yapılacak
+git init . # bu aşama sadece ilk committe yapılacak
 git add .
 git commit -m "ilk commit"
-git remote add origin http://github.com/username/username.github.io.git # bu aşama sadece ilk commitye yapılacak
+git remote add origin http://github.com/username/username.github.io.git # bu aşama sadece ilk committe yapılacak
 git push origin master
 ```
 #### Dikkat : 
