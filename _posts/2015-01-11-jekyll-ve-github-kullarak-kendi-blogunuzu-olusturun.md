@@ -99,3 +99,8 @@ git push origin master
 ## Wordpess yazılarını jekyll'e import etmek
 --------------------------
 -- Eklenecek
+
+
+__Dipnot:__
+
+Bu makaleyi istediğiniz gibi çoğaltabilir, kopyalayabilir ve kaynak göstermeden kullanabilirsiniz. Makalenin MD haline [bu](https://github.com/oksuz/oksuz.github.io/blob/master/_posts/2015-01-11-jekyll-ve-github-kullarak-kendi-blogunuzu-olusturun.md) adresten ulaşabilirsiniz. Makalenin geliştirmesine katkıda bulunmak için __github__ üzerinden [oksuz/oksuz.github.io](https://github.com/oksuz/oksuz.github.io/) reposuna `pull request` gönderebilirsiniz.
