@@ -58,7 +58,7 @@ __Klasör Yapısı ve Dosyalar__
 `site_klasoru/`__hakkimda.md__ --> siteniz.com/__hakkimda.html__
 `site_klasoru/`__deneme/yazilar.md__ --> siteniz.com/__deneme/yazilar.html__
 
-__* İpucu:__ `site_klasorune` eklediğiniz bir dosyanın oluşturma esnasında `_site` altına taşınmasını istemiyorsunuz `_config.yml`'da `exclude` dizinine ekleyebilirsiniz;
+__* İpucu:__ `site_klasorune` eklediğiniz bir dosyanın oluşturma esnasında `_site` altına taşınmasını istemiyorsanız `_config.yml`'da `exclude` dizinine ekleyebilirsiniz;
 
 ```yaml
 exclude: ["README.md", "log", "lib", "herhangibirsey.md"]
@@ -81,7 +81,8 @@ redcarpet:
 Yayına sokma işleminin github kısmı aslında basit, projenizi github.com'a push etmekten hiç farkı yok. Aşağıdaki komutları uygulayarak bloğumuzu canlıya alalım.
 
 ```bash
-git init .
+git init . # bu aşama sadece ilk commitye yapılacak
+git add .
 git commit -m "ilk commit"
 git remote add origin http://github.com/username/username.github.io.git # bu aşama sadece ilk commitye yapılacak
 git push origin master
