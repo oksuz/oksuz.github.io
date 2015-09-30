@@ -1,2 +1,2 @@
-# oksuz.github.io
+# oksuz.github.io , yunusoksuz.com
 My Blog
