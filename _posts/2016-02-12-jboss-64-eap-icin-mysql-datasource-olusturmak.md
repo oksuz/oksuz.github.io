@@ -1,8 +1,8 @@
 ---
 layout: post
 title: "JBoss 6.4 EAP Icin Mysql Datasource Setup"
-date: 2015-01-11 19:06:00
-tags: jekyll github blog
+date: 2016-02-12 15:06:00
+tags: mysql-datasource jboss javaee
 ---
 
 Merhabalar,
