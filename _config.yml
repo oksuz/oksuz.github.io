@@ -4,8 +4,6 @@ disqus_shortname: yunusblog
 comments: true
 reading_time:     false
 words_per_minute: 200
-# Your site's domain goes here (eg: //mmistakes.github.io, http://mademistakes.com, etc)
-# When testing locally leave blank or use http://localhost:4000
 url: http://oksuz.github.io
 
 # Owner/author information
@@ -39,7 +37,7 @@ bing_verify:
 # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 timezone:    Europe/Istanbul
 future:      true
-highlighter: coderay
+highlighter: rouge
 markdown:    kramdown
 gems:
   - jekyll-sitemap
@@ -60,13 +58,6 @@ kramdown:
   toc_levels: 1..6
   use_coderay: true
   input: GFM
-
-  coderay:
-    coderay_line_numbers: nil
-    coderay_line_numbers_start: 1
-    coderay_tab_width: 4
-    coderay_bold_every: 10
-    coderay_css: class
 
 include: [".htaccess"]
 exclude: ["deployer.py", "lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
