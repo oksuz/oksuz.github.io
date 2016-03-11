@@ -1,0 +1,18 @@
+{% if site.description != '' %}
+<div class="sidebar well">
+{{ site.description }}
+</div>
+{% endif %}
+
+<div class="sidebar well">
+    <h1>/son_yazilar</h1>
+    <ul>
+        {% for post in site.posts limit:3 %}
+          <li><a href="{{ site.baseurl}}{{ post.url }}">{{ post.title }}</a></li>
+        {% endfor %}
+    </ul>
+</div>
+
+<div class="sidebar well">
+{% include links-list.html %}
+</div>
