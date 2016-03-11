@@ -14,7 +14,7 @@ asagida vermis oldugum mysql datasource konfigurasyonu __JBoss EAP 6.4__ surumun
 
 Mysql database driver olarak [Connector/j'yi](https://dev.mysql.com/downloads/connector/j/) indiriniz.
 zip icinden cikan `mysql-connector-java-VERSION-bin.jar` dosyasini ve olusturacaginiz `module.xml` dosyasini 
-JBossHome/modules klasoru altina asagidaki gibi olusturunuz
+$JBossHome/modules klasoru altina asagidaki gibi olusturunuz
 
 ```bash
 com/
@@ -30,7 +30,7 @@ com/
 Asagidaki eklemeleri ilgili konfigurasyon dosyalarina ekleyiniz
 
 
-__JBossHome/modules/com/mysql/main/module.xml__
+__$JBossHome/modules/com/mysql/main/module.xml__
 
 
 ```xml
@@ -46,7 +46,7 @@ __JBossHome/modules/com/mysql/main/module.xml__
 </module>
 ```
 
-__JBossHome/standalone/configuration/standalone.xml__
+__$JBossHome/standalone/configuration/standalone.xml__
 
 datasources/drivers node'u altina mysql driver'i ekleyiniz.
 
@@ -84,8 +84,3 @@ ayrica datasources node'u altina yeni bir datasource olarak mysql datasource'unu
 Datasource'unuza ait poolsize/ssl/database_name gibi alanlari kendize gore ozellestirmeyi unutmayiniz.
 
 Kolay gelsin
-
-
-__Dipnot:__
-
-Bu makaleyi istediğiniz gibi çoğaltabilir, kopyalayabilir ve kaynak göstermeden kullanabilirsiniz. Makalenin geliştirmesine katkıda bulunmak için __github__ üzerinden [oksuz/oksuz.github.io](https://github.com/oksuz/oksuz.github.io/) reposuna `pull request` gönderebilirsiniz.
