@@ -6,9 +6,7 @@ tags: mysql-datasource jboss javaee
 comments: true
 ---
 
-Merhabalar,
-
-asagida vermis oldugum mysql datasource konfigurasyonu __JBoss EAP 6.4__ surumunde denenmistir.
+Merhabalar, asagida vermis oldugum mysql datasource konfigurasyonu __JBoss EAP 6.4__ surumunde denenmistir.
 
 ### Dizin Yapisi
 ------------------------
