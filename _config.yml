@@ -1,35 +1,35 @@
-# Jekyll configuration
-title: yunus ~ blog
-description: ''
-name: yunus ~ blog
+# Site configuration
+domain: "https://oksuz.github.io"
+baseurl: "" # the subpath of your site, e.g. /blog/
+url: "https://oksuz.github.io/" # the base hostname & protocol for your site
+permalink: /:title/
+avatar: http://7xof48.com1.z0.glb.clouddn.com/avatar.jpg
+about: http://7xof48.com1.z0.glb.clouddn.com/about.jpg
+favicon: http://7xof48.com1.z0.glb.clouddn.com/favicon.png
+basecss:
+# Theme specific configuration
+title: Yunus Oksuz ~ Blog
+description: >
+  There are no description defined
 
-# url is currently only used only for the RSS feed in feed.xml
-url: http://oksuz.github.io
+# Contact and social media links
+twitter_username: yunus4j
+github_username: oksuz
+facebook_username: oksuzio
+instagram_username: yunus4j
+linkedin_username: yunusoksuz
 
-# baseurl will often be '', but for a project page on gh-pages, it needs to
-# be the project name.
-# *** IMPORTANT: If your local "jekyll serve" throws errors change this to '' or
-#     run it like so: jekyll serve --baseurl=''
-baseurl: ''
+exclude: ['node_modules', 'gulpfile.js', 'package.json']
 
-# This can be '' to hide the Github nav button
-github: 'oksuz'
+kramdown:
+  input: GFM
 
-# Set this to your UA-# value, or '' to disable the block completely
-gaaccount: 'UA-74987136-1'
+# If U enable the comment, edit disqus or duoshuo account
+# before deploy your webpage
+enable_comment: false
+# disqus_account: songroger
 
-# Set this to your disqus shortname to enable comments. Note that the 'comments'
-# setting below must also be true. Individual posts can override 'comments' to
-# disable on a post-by-post basis
-disqus: 'yunusblog'
-comments: true
-
-permalink: /:categories/:title/
-paginate: 3
-
-highlighter: rouge
-markdown: kramdown
 gems: ['jekyll-paginate']
-
-include: [".htaccess"]
-exclude: ["deployer.py", "lib", "config.rb", "Capfile", "config", "Gemfile", "Gemfile.lock", "README.md", "LICENSE", "log", "Rakefile", "Rakefile.rb", "tmp", "less", "*.sublime-project", "*.sublime-workspace", "test", "spec", "Gruntfile.js", "package.json", "node_modules"]
+# Pagination
+paginate: 5
+paginate_path: /archive/page:num

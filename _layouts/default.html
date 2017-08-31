@@ -1,14 +1,17 @@
+<!doctype html>
+<html lang="en">
+{% include head.html %}
+<body>
+
 {% include header.html %}
 
-<div class="container container-center">
-    <div class="row">
-        <div class="col-lg-3 hidden-md hidden-xs hidden-sm">
-            {% include sidebar.html %}
-        </div>
-        <div class="col-md-12 col-lg-9">
-            {{ content }}
-        </div>
-    </div>
-</div>
+{{ content }}
 
 {% include footer.html %}
+<script type="text/javascript">
+  //友盟统计
+  var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");
+  document.write(unescape("%3Cspan style='display:none;' id='cnzz_stat_icon_1260641879'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "s95.cnzz.com/z_stat.php%3Fid%3D1260641879' type='text/javascript'%3E%3C/script%3E"));
+</script>
+</body>
+</html>

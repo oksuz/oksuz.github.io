@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JBoss EAP 6.4 Icin Mysql Datasource Setup"
+title: "JBOSS EAP 6.4 İçin Mysql Datasource Setup"
 date: 2016-02-12 15:06:00
 tags: mysql-datasource jboss javaee
 comments: true
@@ -14,7 +14,7 @@ asagida vermis oldugum mysql datasource konfigurasyonu __JBoss EAP 6.4__ surumun
 ------------------------
 
 Mysql database driver olarak [Connector/j'yi](https://dev.mysql.com/downloads/connector/j/) indiriniz.
-zip icinden cikan `mysql-connector-java-VERSION-bin.jar` dosyasini ve olusturacaginiz `module.xml` dosyasini 
+zip icinden cikan `mysql-connector-java-VERSION-bin.jar` dosyasini ve olusturacaginiz `module.xml` dosyasini
 $JBossHome/modules klasoru altina asagidaki gibi olusturunuz
 
 ```bash
@@ -47,7 +47,7 @@ __$JBossHome/modules/com/mysql/main/module.xml__
 </module>
 ```
 
-__$JBossHome/standalone/configuration/standalone.xml__
+__$JBOSSHome/standalone/configuration/standalone.xml__
 
 datasources/drivers node'u altina mysql driver'i ekleyiniz.
 
@@ -58,7 +58,7 @@ datasources/drivers node'u altina mysql driver'i ekleyiniz.
         <xa-datasource-class>org.h2.jdbcx.JdbcDataSource</xa-datasource-class>
     </driver>
 
-    <driver name="mysql" module="com.mysql"/> 
+    <driver name="mysql" module="com.mysql"/>
 
 </drivers>
 ```

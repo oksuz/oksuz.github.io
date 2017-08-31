@@ -1,43 +1,24 @@
-<!DOCTYPE html>
-<html lang="tr">
+  <header class="header">
 
-<head>
-    <meta charset="UTF-8">
-    <title>{{ site.name }}{% if page.title %} - {{ page.title }} {% endif %}</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="{{ site.baseurl }}/js/jquery.min.js"></script>
-    <script src="{{ site.baseurl }}/js/bootstrap.min.js"></script>
-    <link href="{{ site.baseurl }}/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-    <link href="{{ site.baseurl }}/css/theme.css" rel="stylesheet" type="text/css">
-    <link href="{{ site.baseurl }}/css/syntax.css" rel="stylesheet" type="text/css">
-</head>
+    {% if site.avatar %}
+      <div class="header__logo">
+        <a href="{{ site.baseurl }}/" class="header__link--logo">
+        <!-- <div class="spinner"></div> -->
+        <img src="{{ site.avatar }}"></a>
+      </div>
+    {% else %}
+      <h1 class="header__logo">
+        <a href="{{ site.baseurl }}/" class="header__link--logo">{{ site.title }}</a>
+      </h1>
+    {% endif %}
 
-<body>
+    <nav class="header__nav" role="navigation">      
+      <a href="{{ site.baseurl }}/archive/" class="header__link">Archive</a>
+      <a href="http://twitter.com/{{ site.twitter_username }}" class="header__link" target="_blank">Twitter</a>
+      <!-- <a href="http://github.com/{{ site.github_username }}" class="header__link" target="_blank">Github</a> -->
+      <a href="http://facebook.com/{{ site.facebook_username }}" class="header__link" target="_blank">Facebook</a>
+      <a href="{{ site.baseurl }}/about/" class="header__link">About</a>
+    </nav>
+  </header>
 
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand" href="{{ site.baseurl }}/">{{ site.name }}</a>
-              </div>
-              <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="active"><a href="{{ site.baseurl }}/">/</a></li>
-                    <li class="active visible-xs-block"><a href="{{ site.baseurl }}/links">/urls</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/archive/">/arsiv</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/about/">/hakkinda</a></li>
-                    <li class="active"><a href="{{ site.baseurl }}/feed.xml">/rss</a></li>
-                    {% if site.github != '' %}
-                      <li class="active"><a href="https://github.com/{{ site.github }}">/github</a></li>
-                    {% endif %}
-                </ul>
-              </div>
-        </div>
-    </div>
-</div>
+  <main class="col">

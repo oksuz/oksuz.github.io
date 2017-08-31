@@ -2,30 +2,27 @@
 layout: default
 ---
 
-{% for post in paginator.posts %}
-<div class="article">
-    <div class="well">
-        <h1><a href="{{ site.baseurl}}{{ post.url }}">{{ post.date | date: "%d.%m.%Y" }} - {{ post.title }}</a></h1>
-        {% if site.comments == true and post.comments == true and site.disqus != '' %}
-          <p class="author"><a href="{{ site.baseurl }}{{ post.url }}/#disqus_thread">Yorumlar</a></p>
-        {% endif %}
-        <div class="content">
-            {{ post.content }}
-        </div>
-    </div>
-</div>
-{% endfor %}
+  {% for post in site.posts limit:3 %}
+    <!-- article -->
+    <article class="article">
+      <h2 class="article__title">
+        <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+      </h2>
+      <time class="article__date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
+      <p class="article__excerpt">{{ post.excerpt | truncate: 160 }}</p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="article__more">Read more »</a>
+    </article>
+    <!-- / article -->
+  {% endfor %}
 
-<div class="pagination">
-  {% if paginator.previous_page %}
-      {% if paginator.previous_page == 1 %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/index.html" class="previous">Daha Yeni</a>
-      {% else %}
-        <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.previous_page }}" class="previous">Daha Yeni</a>
-      {% endif %}
-  {% endif %}
-  <span class="page_number ">Sayfa: {{ paginator.page }} / {{ paginator.total_pages }}</span>
-  {% if paginator.next_page %}
-    <a class="btn btn-default" href="{{ site.baseurl}}/page{{ paginator.next_page }}" class="next">Daha Eski</a>
-  {% endif %}
-</div>
+    <!-- <nav class="blocks blocks--space">
+      <div class="blocks__item">
+        {% if paginator.previous_page %}<a href="{{ paginator.previous_page_path }}">Previous</a>{% endif %}
+      </div>
+      <div class="blocks__item">
+        Page: {{ paginator.page }} of {{ paginator.total_pages }}
+      </div>
+      <div class="blocks__item">
+        {% if paginator.next_page %}<a href="{{ paginator.next_page_path }}">Next</a>{% endif %}
+      </div>
+    </nav> -->
