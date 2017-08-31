@@ -2,15 +2,15 @@
 layout: default
 ---
 
-  {% for post in site.posts limit:3 %}
+  {% for post in site.posts limit:10 %}
     <!-- article -->
     <article class="article">
       <h2 class="article__title">
         <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
       </h2>
       <time class="article__date" datetime="{{ post.date | date: "%Y-%m-%d" }}">{{ post.date | date: "%b %-d, %Y" }}</time>
-      <p class="article__excerpt">{{ post.excerpt | truncate: 160 }}</p>
-      <a href="{{ post.url | prepend: site.baseurl }}" class="article__more">Read more »</a>
+      <p class="article__excerpt"></p>
+      <a href="{{ post.url | prepend: site.baseurl }}" class="article__more">Dahası »</a>
     </article>
     <!-- / article -->
   {% endfor %}

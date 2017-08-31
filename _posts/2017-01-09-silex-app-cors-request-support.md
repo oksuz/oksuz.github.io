@@ -8,7 +8,7 @@ comments: true
 
 Silex micro framework ile cors isteklere cevap vermek için __after middleware__'ini kullanabiliriz.
 
-```php
+```
 $app->after(function (\Symfony\Component\HttpFoundation\Request $request, \Symfony\Component\HttpFoundation\Response $response) {
    $response->headers->add(array(
        "Access-Control-Allow-Origin" => "*",
@@ -24,7 +24,7 @@ böylelikle her istek için sunucudan dönen cevap header'ina yukarıdaki değer
 `Access-Control-Request-Method` headerinda belirttigimiz kontrol metoduna ilişkin olarak aşağıdaki gibi tüm option sorgularina cevap verecek birde route eklememiz gerekli.
 
 
-```php
+```
 $app->options("{anything}", function () {
    return new \Symfony\Component\HttpFoundation\Response(null, 204);
 })->assert("anything", ".*");
