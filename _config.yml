@@ -3,9 +3,9 @@ domain: "https://oksuz.github.io"
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://oksuz.github.io" # the base hostname & protocol for your site
 permalink: /:title/
-avatar: https://avatars0.githubusercontent.com/u/1628550?v=4&s=460
-about: /avatar.jpg
-favicon: http://7xof48.com1.z0.glb.clouddn.com/favicon.png
+avatar: /avatar.jpeg
+about: /about-avatar.jpg
+favicon: favicon.ico
 basecss:
 # Theme specific configuration
 title: Yunus Oksuz ~ Blog
