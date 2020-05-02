@@ -1,35 +1,49 @@
-# Site configuration
-domain: "https://oksuz.github.io"
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://oksuz.github.io" # the base hostname & protocol for your site
-permalink: /:title/
-avatar: /avatar.jpeg
-about: /about-avatar.jpg
-favicon: favicon.ico
-basecss:
-# Theme specific configuration
-title: Yunus Oksuz ~ Blog
-description: >
-  There are no description defined
+title: Yunus Öksüz ~ Blog
+author: oksuz
+email: yunusoksuz@gmail.com
+description: > # this means to ignore newlines until "show_exerpts:"
+  
+show_excerpts: true # set to true to show excerpts on the homepage
 
-# Contact and social media links
-twitter_username: yunus4j
-github_username: oksuz
-facebook_username: oksuzio
-instagram_username: yunus4j
-linkedin_username: yunusoksuz
+permalink: /:categories/:year/:title
 
-exclude: ['node_modules', 'gulpfile.js', 'package.json']
+# Minima date format
+# refer to http://shopify.github.io/liquid/filters/date/ if you want to customize this
+sass:
+  sass_dir: _sass
+plainwhite:
+  name: Yunus Öksüz
+  tagline: Developer
+  date_format: "%d.%m.%Y"
+  sitemap: true # set to true to generate sitemap.xml content
+  disqus_shortname: oksuzblog
+  # generate social links in footer
+  social_links:
+    github:  oksuz
+    linkedIn: in/yunusoksuz
+    rss: rss
+    # dribbble: jekyll
+    # flickr:   jekyll
+    # instagram: jekyll
+    # pinterest: jekyll
+    # youtube: jekyll
+    # facebook: jekyll
 
-kramdown:
-  input: GFM
+    # Mastodon instances
+    # mastodon:
+    # - username: jekyll
+    #   instance: example.com
+    # - username: jekyll2
+    #   instance: example.com
 
-# If U enable the comment, edit disqus or duoshuo account
-# before deploy your webpage
-enable_comment: false
-# disqus_account: songroger
+# If you want to link only specific pages in your header, uncomment
+# this and add the path to the pages in order as they should show up
+#header_pages:
+# - about.md
 
-gems: ['jekyll-paginate']
-# Pagination
-paginate: 5
-paginate_path: /archive/page:num
+# Build settings
+theme: plainwhite
+
+plugins:
+  - jekyll-seo-tag
+#  - jekyll-feed
