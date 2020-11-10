@@ -5,13 +5,11 @@ author:      Yunus Oksuz
 description: "My thoughts and experiences about software development"
 baseurl:     ""
 url:         "https://yunusoksuz.com"
-date_format: "%b %-d, %Y"
+date_format: "%d.%m.%Y"
 header_pages:
  - about.md
 
 google_analytics:
-
-permalink: /:categories/:year/:title
 
 # Optional features
 animated:             true
@@ -27,7 +25,7 @@ disqus_shortname: oksuzblog
 
 # Social icons
 github_username: oksuz
-twitter_username: 0x076f
+twitter_username: "0x076f"
 linkedin_username: yunusoksuz
 
 # Post sharing icons
