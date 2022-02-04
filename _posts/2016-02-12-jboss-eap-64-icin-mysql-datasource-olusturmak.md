@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "JBOSS EAP 6.4 İçin Mysql Datasource Setup"
+title: "JBOSS EAP 6.4 Mysql Datasource Setup"
 date: 2016-02-12 15:06:00
 tags: mysql-datasource jboss javaee
 comments: true
